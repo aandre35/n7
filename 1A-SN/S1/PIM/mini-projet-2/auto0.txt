@@ -1,0 +1,62 @@
+% Validation de http://cregut.svn.enseeiht.fr/2018/1sn/pim/tps/aandre2/pr2
+% Run on 2018-12-25 09:11:11.899113
+
+# Respect des fichiers fournis
+
+* Fichier tableaux.adb modifié... ok
+* Fichier tableaux.ads modifié... ok
+* Fichier test_tableaux.adb modifié... ok
+* Fichier exemple_tableaux.adb modifié... ok
+* Fichier LISEZ-MOI.txt modifié... ok
+* Running gnatclean... ok
+* Utilisation de Assert dans test_files.adb... ok
+
+  | test_tableaux.adb:        pragma Assert (Taille (Tableau1) = 5);
+  | test_tableaux.adb:	pragma Assert (Obtenir_Element (Tableau1, 1) = 4);
+  | test_tableaux.adb:	pragma Assert (Obtenir_Element (Tableau1, 4) = 3);
+  | test_tableaux.adb:	pragma Assert (Obtenir_Element (Tableau1, 2) = Obtenir_Element (Tableau1, 4) );
+  | test_tableaux.adb:	     pragma Assert (Obtenir_Element (Tableau1, i) = Obtenir_Element (Tableau2, i) );
+  | test_tableaux.adb:	--pragma Assert (not Obtenir_Element (Tableau1, 2) = 3);
+  | test_tableaux.adb:	pragma Assert (Obtenir_Element (Tableau1, 2) = -7);
+  | test_tableaux.adb:	pragma Assert (Taille (Tableau1) = 6);
+  | test_tableaux.adb:        pragma Assert (Obtenir_Element (Tableau1 , 6) = 1);
+  | test_tableaux.adb:        pragma Assert (Est_Present (Tableau1, 3));
+  | test_tableaux.adb:        pragma Assert (not Est_Present(Tableau1, 11));
+  | test_tableaux.adb:        pragma Assert (Est_Present (Tableau1, 3));
+  | test_tableaux.adb:	pragma Assert (Obtenir_Element(Tableau1, 2) = 9);
+  | test_tableaux.adb:	pragma Assert (Taille (Tableau1) = 4);
+  | test_tableaux.adb:	pragma Assert (Obtenir_Element(Tableau1, 2) = 1);
+  | test_tableaux.adb:	pragma Assert (Obtenir_Element(Tableau1, 2) = 3);
+  | test_tableaux.adb:            pragma Assert (not Est_Present(Tableau1, 3));
+
+* Compilation de tableaux.adb... ok
+
+  | gcc-7 -c -gnatwa -gnata -g tableaux.adb
+  | tableaux.adb:3:09: warning: no entities of "Ada.Text_IO" are referenced
+
+* Compilation de test_tableaux.adb... ok
+
+  | gcc-7 -c -gnatwa -gnata -g test_tableaux.adb
+  | gnatbind-7 -x test_tableaux.ali
+  | gnatlink-7 test_tableaux.ali -g
+
+* ./test_tableaux < /dev/null... ok
+
+  | 
+
+* Compilation de exemple_tableaux.adb... ok
+
+  | gcc-7 -c -gnatwa -gnata -g exemple_tableaux.adb
+  | exemple_tableaux.adb:3:09: warning: no entities of "Ada.Integer_Text_IO" are referenced
+  | exemple_tableaux.adb:4:20: warning: no entities of "Ada.Characters.Latin_1" are referenced
+  | exemple_tableaux.adb:8:11: warning: file name does not match unit name, should be "utiliser_tableaux.adb"
+  | exemple_tableaux.adb:18:09: warning: "Max" is not modified, could be declared constant
+  | gnatbind-7 -x exemple_tableaux.ali
+  | gnatlink-7 exemple_tableaux.ali -g
+
+* ./exemple_tableaux < /dev/null... ok
+
+  | Tester_Tableau_Entier
+  | Tester_Tableau_CaractÃ¨re
+
+* Running gnatclean... ok

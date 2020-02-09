@@ -1,0 +1,130 @@
+% Validation de http://cregut.svn.enseeiht.fr/2018/1sn/pim/tps/aandre2/pr1
+% Run on 2018-12-20 22:40:34.179566
+
+# Respect des fichiers fournis
+
+* Fichier alea.adb non modifié... ok
+* Fichier alea.ads non modifié... ok
+* Fichier exemple_alea.adb non modifié... ok
+* Fichier allumettes.adb modifié... ok
+* Running gnatclean... ok
+* Compilation de allumettes.adb... ok
+
+  | gcc-7 -c -gnatwa -gnata -g allumettes.adb
+  | gcc-7 -c -gnatwa -gnata -g alea.adb
+  | gnatbind-7 -x allumettes.ali
+  | gnatlink-7 allumettes.ali -g
+
+* ./allumettes < "r n 1 1 2"... ok
+
+  | Saisir un niveau: naif(n), distrait(d), rapide (r) ou expert (e)
+  | Mon niveau est rapide
+  | Souhaitez-vous commencer ? (o/n)Vous avez choisi de ne pas commencer
+  | 
+  | j'ai tirÃ©  3 Allumettes
+  | Il reste  10 Allumettes
+  | |  |  |  |  |  |  |  |  |  |  
+  | |  |  |  |  |  |  |  |  |  |  
+  | |  |  |  |  |  |  |  |  |  |  
+  | |  |  |  |  |  |  |  |  |  |  
+  | Choisir un entier entre 1 et  3
+  | 
+  | 
+  | Il reste  9 Allumettes
+  | |  |  |  |  |  |  |  |  |  
+  | |  |  |  |  |  |  |  |  |  
+  | |  |  |  |  |  |  |  |  |  
+  | |  |  |  |  |  |  |  |  |  
+  | 
+  | j'ai tirÃ©  3 Allumettes
+  | Il reste  6 Allumettes
+  | |  |  |  |  |  |  
+  | |  |  |  |  |  |  
+  | |  |  |  |  |  |  
+  | |  |  |  |  |  |  
+  | Choisir un entier entre 1 et  3
+  | 
+  | 
+  | Il reste  5 Allumettes
+  | |  |  |  |  |  
+  | |  |  |  |  |  
+  | |  |  |  |  |  
+  | |  |  |  |  |  
+  | 
+  | j'ai tirÃ©  3 Allumettes
+  | Il reste  2 Allumettes
+  | |  |  
+  | |  |  
+  | |  |  
+  | |  |  
+  | Choisir un entier entre 1 et  2
+  | 
+  | 
+  | Il reste  0 Allumettes
+  | 
+  | 
+  | 
+  | 
+  | Vous avez gagnÃ©!!!
+
+* ./allumettes < "r o 5 -1 2 1 3 1 1 1 1"... ok
+
+  | Saisir un niveau: naif(n), distrait(d), rapide (r) ou expert (e)
+  | Mon niveau est rapide
+  | Souhaitez-vous commencer ? (o/n)Vous avez choisi de commencer
+  | Choisir un entier entre 1 et  3
+  | 
+  | Veuillez saisir un nombre correct svp
+  | 
+  | Choisir un entier entre 1 et  3
+  | 
+  | Veuillez saisir un nombre correct svp
+  | 
+  | Choisir un entier entre 1 et  3
+  | 
+  | 
+  | Il reste  11 Allumettes
+  | |  |  |  |  |  |  |  |  |  |  |  
+  | |  |  |  |  |  |  |  |  |  |  |  
+  | |  |  |  |  |  |  |  |  |  |  |  
+  | |  |  |  |  |  |  |  |  |  |  |  
+  | 
+  | j'ai tirÃ©  3 Allumettes
+  | Il reste  8 Allumettes
+  | |  |  |  |  |  |  |  |  
+  | |  |  |  |  |  |  |  |  
+  | |  |  |  |  |  |  |  |  
+  | |  |  |  |  |  |  |  |  
+  | Choisir un entier entre 1 et  3
+  | 
+  | 
+  | Il reste  7 Allumettes
+  | |  |  |  |  |  |  |  
+  | |  |  |  |  |  |  |  
+  | |  |  |  |  |  |  |  
+  | |  |  |  |  |  |  |  
+  | 
+  | j'ai tirÃ©  3 Allumettes
+  | Il reste  4 Allumettes
+  | |  |  |  |  
+  | |  |  |  |  
+  | |  |  |  |  
+  | |  |  |  |  
+  | Choisir un entier entre 1 et  3
+  | 
+  | 
+  | Il reste  1 Allumettes
+  | |  
+  | |  
+  | |  
+  | |  
+  | 
+  | j'ai tirÃ©  1 Allumettes
+  | Il reste  0 Allumettes
+  | 
+  | 
+  | 
+  | 
+  | Le vainqueur est l'ordinateur :(
+
+* Running gnatclean... ok

@@ -1,0 +1,10 @@
+project Default is
+
+   for Main use ("exemple_tableaux.adb", "tableaux.adb", "tableaux.ads", "test_tableaux.adb");
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-gnatwa", "-gnata", "-g");
+   end Compiler;
+
+end Default;
+

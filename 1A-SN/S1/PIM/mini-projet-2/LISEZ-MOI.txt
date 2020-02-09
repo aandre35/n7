@@ -1,0 +1,26 @@
+Nom    : 
+Prénom :
+Groupe : 
+--------------------------------------------------------------------------------
+
+
+Consigne : Dans ce fichier, il faut répondre à la place des "..." et sur les
+lignes qui les suivent.  Le texte déjà écrit doit être conservé !
+
+=====[ Informations ]===========================================================
+
+Temps passé sur le projet : 3 heures (en plus de la séance de TP prévue)
+
+
+=====[ Difficultés ]============================================================
+
+-- Indiquer les difficultés rencontrées et les solutions apportées.
+
+...
+
+
+=====[ Remarques diverses ]=====================================================
+
+...
+
+--------------------------------------------------------------------------------

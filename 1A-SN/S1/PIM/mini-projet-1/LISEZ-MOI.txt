@@ -1,0 +1,143 @@
+Nom    : André
+Prénom : Adrien
+Groupe : F
+--------------------------------------------------------------------------------
+
+
+Consigne : Dans ce fichier, il faut répondre à la place des "..." et sur les
+lignes qui les suivent.  Le texte déjà écrit doit être conservé !
+
+
+=====[ Raffinages ]=============================================================
+
+-- Ne donner que les niveaux de raffinages qui sont informatifs.   Il est
+-- généralement inutile de donner le dernier niveau de raffinage s'il ne
+-- contient pas d'étapes non élémentaires.
+
+
+R0 : Affronter la machine au jeu des 13 allumettes.
+
+	Exemples : On ne donnera pas d'exemple d'utilisation
+
+
+	R1 : Comment jouer au jeu des 13 allumettes contre la machine?
+
+		*Choisir le niveau de l'ordinateur.
+
+		*Choisir si l'on commence à jouer.
+
+		*Déroulement du jeu
+
+		*Afficher le vainqueur
+
+	
+		R2: Comment choisir un niveau de l'ordinateur?
+
+			*Demander à l'utilisateur de saisir un niveau (naif (n), distrait(d), rapide (r) ou expert (e))
+			
+			*Vérifier que le niveau est valide
+
+				
+				R3: Comment vérifier que le niveau est valide?
+
+					SI niveau='n' ou niveau='d' ou niveau='r' ou niveau='R'ou niveau='D'ou niveau='R' FAIRE
+						SI niveau='n' ou niveau='R' FAIRE 
+							Afficher 'Mon niveau est naïf'
+						SI niveau='d' ou niveau='D' FAIRE
+							Afficher 'Mon niveau est distrait'
+						SI niveau='r' ou niveau='R' FAIRE
+							Afficher 'Mon niveau est rapide'
+					SINON 	
+						niveau='e'
+						Afficher 'Mon niveau est expert'
+					FIN SI
+ 	
+
+		R2: Comment choisir si l'on commence à jouer?
+
+			Saisie=non valide
+	
+			REPETER 
+			
+			*Demander à l'utilisaeur de saisir 'o' ou 'n'
+			*Vérifier que la saisie est valide
+
+			JUSQU'A Saisie=valide
+			FIN REPETER 
+
+			R3: Comment vérifier que la saisie est valide?
+				Saisie=non valide
+				
+				SI reponse='o' ou reponse='O' ou reponse='n' ou reponse='N' FAIRE
+					Sasie= valide
+					
+
+
+		R2: Comment effectuer le déroulement du jeu?
+			
+			*faire commencer le bon joueur
+
+			REPETER 
+				SI joueur='humain" FAIRE
+					Demander à l'utilisateur de choisir un entier entre 1 et 3
+					
+					*Vérifier que ce nombre est correct 
+
+					Afficher le nombre d'allumettes restantes
+				SINON
+					*La machine choisit un nombre aléatoire en fonction du niveau demandé par l'utilisateur
+			JUSQU'A nombre_allumettes=0
+
+			 
+			R3: Comment faire commencer le bon joueur?
+			
+				SI reponse = 'o' ou reponse ='O'
+					joueur='humain'
+				SINON 
+					joueur='ordinateur'
+			
+			R3: Comment vérifier que le nombre est correct?
+
+				*Vérifier qu'il s'agit d'un entier compris entre 1 et min(3,nombre_allumettes)
+				
+				*Dans le cas contraire, demander à l'utilisateur de rejouer
+
+			
+			R3: Comment la machine choisit son nombre ?
+
+				SI niveau='n' ou niveau='R' FAIRE
+					Choisir un entier aléatoire entre 1 et min(3,nombre_allumettes)
+				SI niveau='d' ou niveau='D' FAIRE
+					Choisir un entier aléatoire entre 1 et 3 
+				SI niveau='r' ou niveau='R' FAIRE
+					Choisir min(3,nombre_allumettes)
+				SINON 
+					Choisir un nombre idéal
+				FIN SI
+			
+
+		R2: Comment afficher le vainqueur?
+
+			SI joueur='humain'
+				Afficher 'J'ai gagné'
+			SINON 
+				Afficher 'Vous avez gagné'
+
+=====[ Tests ]==================================================================
+
+-tests pour corriger les erreurs du programme
+-tests pour vérifier le bon fonctionnement des niveaux
+-tests pour vérfier que le nombre d'allumettes est bien toujours positif
+-tests pour optimiser la syntaxe des messages affichés lors de l'exécution du pgrm
+
+
+=====[ Difficultés ]============================================================
+
+La mise en place de la structure du programme a été assez rapide, mais étant débutant 
+en informatique et n'ayant jamais utilisé le langaga ada, la plus
+importante partie du temps que j'ai consacré à ce projet fut de corriger les erreurs présentent 
+dans mon programme (erreurs de syntaxe, confusion entre les différentes variables, soucis avec les boucles...).
+
+=====[ Remarques diverses ]=====================================================
+
+Ce projet m'a permit de découvir les bases du langage ada.

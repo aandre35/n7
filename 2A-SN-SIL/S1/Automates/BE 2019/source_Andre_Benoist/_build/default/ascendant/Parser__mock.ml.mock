@@ -1,0 +1,184 @@
+
+type token = 
+  | UL_VIRG
+  | UL_VARIABLE of (
+# 21 "ascendant/Parser.mly"
+       (string)
+# 8 "ascendant/Parser__mock.ml.mock"
+)
+  | UL_SYMBOLE of (
+# 20 "ascendant/Parser.mly"
+       (string)
+# 13 "ascendant/Parser__mock.ml.mock"
+)
+  | UL_PT
+  | UL_PAROUV
+  | UL_PARFER
+  | UL_NEG
+  | UL_FIN
+  | UL_FAIL
+  | UL_EXCL
+  | UL_DED
+
+# 1 "ascendant/Parser.mly"
+  
+
+(* Partie recopiee dans le fichier CaML genere. *)
+(* Ouverture de modules exploites dans les actions *)
+(* Declarations de types, de constantes, de fonctions, d'exceptions exploites dans les actions *)
+
+
+# 32 "ascendant/Parser__mock.ml.mock"
+
+let menhir_begin_marker =
+  0
+
+and (xv_terme, xv_suite_terme, xv_suite_regle, xv_suite_predicat, xv_suite_expression, xv_regle, xv_predicat, xv_o, xv_expression, xv_document) =
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (_2 : 'tv_o) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (_1 : (
+# 20 "ascendant/Parser.mly"
+       (string)
+# 41 "ascendant/Parser__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 56 "ascendant/Parser.mly"
+                     ( (print_endline "terme : SYMBOLE o ") )
+# 46 "ascendant/Parser__mock.ml.mock"
+     : 'tv_terme) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (_1 : (
+# 21 "ascendant/Parser.mly"
+       (string)
+# 51 "ascendant/Parser__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 55 "ascendant/Parser.mly"
+                    ( (print_endline "terme : VARIABLE ") )
+# 56 "ascendant/Parser__mock.ml.mock"
+     : 'tv_terme) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (_3 : 'tv_suite_terme) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (_2 : 'tv_terme) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (_1 : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 59 "ascendant/Parser.mly"
+                                        ( (print_endline "suite_terme : VIRG terme suite_terme ") )
+# 62 "ascendant/Parser__mock.ml.mock"
+     : 'tv_suite_terme) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ->
+    (
+# 58 "ascendant/Parser.mly"
+                                     ( (print_endline "suite_terme : mot vide ") )
+# 68 "ascendant/Parser__mock.ml.mock"
+     : 'tv_suite_terme) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (_2 : 'tv_suite_regle) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (_1 : 'tv_regle) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 38 "ascendant/Parser.mly"
+                                ( (print_endline "suite_regle : regle suite_regle ") )
+# 74 "ascendant/Parser__mock.ml.mock"
+     : 'tv_suite_regle) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ->
+    (
+# 37 "ascendant/Parser.mly"
+                                    ( (print_endline "suite_regle : mot vide ") )
+# 80 "ascendant/Parser__mock.ml.mock"
+     : 'tv_suite_regle) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (_3 : 'tv_suite_expression) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (_2 : 'tv_expression) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (_1 : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 43 "ascendant/Parser.mly"
+                                                   ( (print_endline "suite_predicat : DEDUCTION expression suite_expression ") )
+# 86 "ascendant/Parser__mock.ml.mock"
+     : 'tv_suite_predicat) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ->
+    (
+# 42 "ascendant/Parser.mly"
+                                       ( (print_endline "suite_predicat : mot vide ") )
+# 92 "ascendant/Parser__mock.ml.mock"
+     : 'tv_suite_predicat) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (_3 : 'tv_suite_expression) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (_2 : 'tv_expression) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (_1 : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 51 "ascendant/Parser.mly"
+                                                        ( (print_endline "suite_expression : VIRG expression suite_expression ") )
+# 98 "ascendant/Parser__mock.ml.mock"
+     : 'tv_suite_expression) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ->
+    (
+# 50 "ascendant/Parser.mly"
+                                         ( (print_endline "suite_expression : mot vide ") )
+# 104 "ascendant/Parser__mock.ml.mock"
+     : 'tv_suite_expression) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (_3 : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (_2 : 'tv_suite_predicat) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (_1 : 'tv_predicat) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 40 "ascendant/Parser.mly"
+                                      ( (print_endline "regle : predicat suite_predicat PT ") )
+# 110 "ascendant/Parser__mock.ml.mock"
+     : 'tv_regle) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (_5 : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (_4 : 'tv_suite_terme) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (_3 : 'tv_terme) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (_2 : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (_1 : (
+# 20 "ascendant/Parser.mly"
+       (string)
+# 115 "ascendant/Parser__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 53 "ascendant/Parser.mly"
+                                                            ( (print_endline "predicat : SYMBOLE PAR_OUVR terme suite_term PAR_FERM") )
+# 120 "ascendant/Parser__mock.ml.mock"
+     : 'tv_predicat) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (_4 : unit) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (_3 : 'tv_suite_terme) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (_2 : 'tv_terme) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (_1 : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 62 "ascendant/Parser.mly"
+                                            ( (print_endline "o : PAR_OUVR terme suite_terme PAR_FERM ") )
+# 126 "ascendant/Parser__mock.ml.mock"
+     : 'tv_o) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ->
+    (
+# 61 "ascendant/Parser.mly"
+                           ( (print_endline "o : mot vide ") )
+# 132 "ascendant/Parser__mock.ml.mock"
+     : 'tv_o) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (_1 : 'tv_predicat) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 48 "ascendant/Parser.mly"
+                       ( (print_endline "expression : predicat ") )
+# 138 "ascendant/Parser__mock.ml.mock"
+     : 'tv_expression) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (_2 : 'tv_predicat) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (_1 : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 47 "ascendant/Parser.mly"
+                              ( (print_endline "expression : NEG predicat") )
+# 144 "ascendant/Parser__mock.ml.mock"
+     : 'tv_expression) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (_1 : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 46 "ascendant/Parser.mly"
+                      ( (print_endline "expression : EXCL ") )
+# 150 "ascendant/Parser__mock.ml.mock"
+     : 'tv_expression) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (_1 : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 45 "ascendant/Parser.mly"
+                     ( (print_endline "expression : FAIL ") )
+# 156 "ascendant/Parser__mock.ml.mock"
+     : 'tv_expression) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (_3 : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (_2 : 'tv_suite_regle) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (_1 : 'tv_regle) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 35 "ascendant/Parser.mly"
+                                    ( (print_endline "programme : regle suite_regle FIN ") )
+# 162 "ascendant/Parser__mock.ml.mock"
+     : (
+# 28 "ascendant/Parser.mly"
+      (unit)
+# 166 "ascendant/Parser__mock.ml.mock"
+    )) in
+  (raise Not_found : 'tv_terme * 'tv_suite_terme * 'tv_suite_regle * 'tv_suite_predicat * 'tv_suite_expression * 'tv_regle * 'tv_predicat * 'tv_o * 'tv_expression * (
+# 28 "ascendant/Parser.mly"
+      (unit)
+# 171 "ascendant/Parser__mock.ml.mock"
+  ))
+
+and menhir_end_marker =
+  0
+
+# 68 "ascendant/Parser.mly"
+  
+
+# 180 "ascendant/Parser__mock.ml.mock"
+
+# 269 "<standard.mly>"
+  
+
+# 185 "ascendant/Parser__mock.ml.mock"
