@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "readcmd.h": "c",
+        "string.h": "c",
+        "signal.h": "c",
+        "wait.h": "c",
+        "stdlib.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}

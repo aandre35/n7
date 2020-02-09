@@ -1,0 +1,5 @@
+#!/bin/bash
+#!/bin/bash
+ip link set dev eth0 up
+ip address add 170.4.255.131/25 dev eth0
+ip route add default via 170.4.255.129

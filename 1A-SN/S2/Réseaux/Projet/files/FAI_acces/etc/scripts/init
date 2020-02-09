@@ -1,0 +1,6 @@
+#!/bin/bash
+ip link set dev eth0 up
+ip link set dev eth1 up
+ip address add 170.4.255.33/27 dev eth0
+ip address add 170.4.255.18/28 dev eth1
+echo 1 > /proc/sys/net/ipv4/ip_forward

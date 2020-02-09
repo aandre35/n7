@@ -1,0 +1,56 @@
+network:
+  name: ProjetAdri
+  version: 0.1
+  hosts:
+    - Ordi
+      mode : netns
+      init : ./scripts/Ordi
+ 
+    - BOX
+      mode : docker
+      image : dhcp_n7:latest
+      files : ./files/BOX/etc:/
+ 
+    - FAI_acces
+      mode : docker
+      image : quagga_n7:latest
+      files : ./files/FAI_acces/etc:/
+ 
+    - FAI_interconnexion
+      mode : docker
+      image : quagga_n7:latest
+      files : ./files/FAI_interconnexion/etc:/
+ 
+    - FAI_services
+      mode : docker
+      image : quagga_n7:latest
+      files : ./files/FAI_services/etc:/
+ 
+ 
+    - S_WEB
+      mode : docker
+      image : apache_n7:latest
+      files : ./files/S_WEB/var:/
+ 
+    - S_FTP
+      mode : docker
+      image : ftp_n7:latest
+      files : ./files/S_FTP/etc:/
+ 
+    - S_DNS
+      mode : docker
+      image : dns_n7:latest
+      files : ./files/S_DNS/etc:/
+ 
+  links :
+    - Ordi:eth0!BOX:eth0
+    - BOX:eth1!FAI_acces:eth1
+    - FAI_acces:eth0!FAI_interconnexion:eth0
+    - FAI_interconnexion:eth1!FAI_services:eth1
+ 
+  bridges:
+    - Switch0
+      interfaces: FAI_services:eth0!S_DNS:eth0!S_WEB:eth0!S_FTP:eth0!
+ 
+  consoles :
+    - all

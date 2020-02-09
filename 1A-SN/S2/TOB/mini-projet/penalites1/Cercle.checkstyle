@@ -1,0 +1,18 @@
+Début de la vérification...
+[ERROR] Cercle.java:21:9: Commentaire Javadoc manquant. [JavadocMethod]
+[ERROR] Cercle.java:30:9: Commentaire Javadoc manquant. [JavadocMethod]
+[ERROR] Cercle.java:39:9: Commentaire Javadoc manquant. [JavadocMethod]
+[ERROR] Cercle.java:51:12: Balise Javadoc @param inutilisée pour 'centre'. [JavadocMethod]
+[ERROR] Cercle.java:54:39: Balise Javadoc @param manquante pour 'dx'. [JavadocMethod]
+[ERROR] Cercle.java:54:50: Balise Javadoc @param manquante pour 'dy'. [JavadocMethod]
+[ERROR] Cercle.java:88:39: Balise Javadoc @param manquante pour 'A'. [JavadocMethod]
+[ERROR] Cercle.java:93:9: Commentaire Javadoc manquant. [JavadocMethod]
+[ERROR] Cercle.java:97:9: Commentaire Javadoc manquant. [JavadocMethod]
+[ERROR] Cercle.java:122: Balise Javadoc @return manquante. [JavadocMethod]
+[ERROR] Cercle.java:122:48: Balise Javadoc @param manquante pour 'center'. [JavadocMethod]
+[ERROR] Cercle.java:122:62: Balise Javadoc @param manquante pour 'pointCirconference'. [JavadocMethod]
+[ERROR] Cercle.java:133: Balise Javadoc @return manquante. [JavadocMethod]
+[ERROR] Cercle.java:141:37: Balise Javadoc @param manquante pour 'newrayon'. [JavadocMethod]
+[ERROR] Cercle.java:150:40: Balise Javadoc @param manquante pour 'newdiametre'. [JavadocMethod]
+Vérification terminée.
+Checkstyle se termine par 15 erreurs.

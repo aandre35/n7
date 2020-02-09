@@ -1,0 +1,8 @@
+13c13
+< 	/** Retirer des allumettes.  Le nombre d'allumettes doit Ãªtre compris
+---
+> 	/** Retirer des allumettes.  Le nombre d'allumettes doit être compris
+17c17
+< 	 * @throws CoupInvalideException tentative de prendre un nombre invalide d'alumettes
+---
+> 	 * @throws CoupInvalideException tentative de prendre un nombre invalide d'allumettes
