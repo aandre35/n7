@@ -1,0 +1,13 @@
+/* -*-c-mode-*- */
+division4 {
+  struct E { int a; int b; } e = { 31, 5 };
+  int r = e.a;
+  int b = e.b;
+  int q = 0;
+  while (b <= r) {
+    r = r - b;
+    q = q + 1;
+  }
+  print q;
+  print r;
+}

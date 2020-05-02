@@ -1,0 +1,5 @@
+letrec sommeentier = 
+ fun n -> if (n = 0 )
+          then 1
+          else n + ((sommeentier) (n-1))
+ in sommeentier

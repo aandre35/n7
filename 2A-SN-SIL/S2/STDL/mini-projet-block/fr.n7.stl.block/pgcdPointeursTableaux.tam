@@ -1,0 +1,54 @@
+;--------------------------------------------
+;VariableDeclaration : int v = 1
+;--------------------------------------------
+PUSH 1
+LOADL 1
+STORE (1) 0[SB]
+;--------------------------------------------
+;VariableDeclaration : (int *) ptr = fr.n7.stl.block.ast.expression.accessible.AddressAccess@3e3abc88
+;--------------------------------------------
+PUSH 1
+LOADA 0[SB]
+STORE (1) 1[SB]
+;--------------------------------------------
+;VariableDeclaration : int j = (*ptr)
+;--------------------------------------------
+PUSH 1
+; -> VariableAccess: ptr
+LOAD (1) 1[SB]
+LOADI (1)
+STORE (1) 2[SB]
+LOADL 2
+LOAD (1) 1[SB]
+STOREI (1)
+;--------------------------------------------
+;VariableDeclaration : (int []) t = new int[ 5 ]
+;--------------------------------------------
+PUSH 1
+LOADL 5
+LOADL 1
+SUBR IMul
+SUBR MAlloc
+STORE (1) 3[SB]
+;--------------------------------------------
+;VariableDeclaration : int i = t[ 3 ]
+;--------------------------------------------
+PUSH 1
+; -> VariableAccess: t
+LOAD (1) 3[SB]
+LOADL 3
+LOADL 1
+SUBR IMul
+SUBR IAdd
+LOADI (1)
+STORE (1) 4[SB]
+LOADL 4
+LOAD (1) 3[SB]
+LOADL 3
+LOADL 1
+SUBR IMul
+SUBR IAdd
+STOREI (1)
+POP (0) 5
+HALT
+

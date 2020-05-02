@@ -1,0 +1,46 @@
+;--------------------------------------------
+;VariableDeclaration : int n = 10
+;--------------------------------------------
+PUSH 1
+LOADL 10
+STORE (1) 0[SB]
+;--------------------------------------------
+;VariableDeclaration : int r = 1
+;--------------------------------------------
+PUSH 1
+LOADL 1
+STORE (1) 1[SB]
+; -> VariableAccess: n
+;(n > 0)
+;--------------------------------------------
+;WHILE 1 : condition : (n > 0)
+;--------------------------------------------
+etiq_debut_while_1
+LOAD (1) 0[SB]
+LOADL 0
+SUBR IGtr
+JUMPIF (0) etiq_fin_while_1
+; -> VariableAccess: r
+;(r * n)
+LOAD (1) 1[SB]
+; -> VariableAccess: n
+LOAD (1) 0[SB]
+SUBR IMul
+STORE (1) 1[SB]
+; -> VariableAccess: n
+;(n - 1)
+LOAD (1) 0[SB]
+LOADL 1
+SUBR ISub
+STORE (1) 0[SB]
+JUMP etiq_debut_while_1
+etiq_fin_while_1
+; -> VariableAccess: n
+;--------------
+;Printer : print n
+;--------------
+LOAD (1) 0[SB]
+SUBR IOut
+POP (0) 2
+HALT
+

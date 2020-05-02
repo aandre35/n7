@@ -1,0 +1,17 @@
+;--------------------------------------------
+;VariableDeclaration : struct B { boolean a; boolean b;} p = { true ,false }
+;--------------------------------------------
+PUSH 2
+LOADL 1
+LOADL 0
+STORE (2) 0[SB]
+; -> VariableAccess: p
+;--------------------------------------------
+;IF 1 : condition : p.a
+;--------------------------------------------
+LOAD (2) 0[SB]
+JUMPIF (0) etiq_fin_if_1
+etiq_fin_if_1
+POP (0) 2
+HALT
+

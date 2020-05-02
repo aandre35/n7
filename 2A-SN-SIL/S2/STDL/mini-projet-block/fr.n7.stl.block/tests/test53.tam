@@ -1,0 +1,12 @@
+;--------------------------------------------
+;VariableDeclaration : (int []) p = new int[ 2 ]
+;--------------------------------------------
+PUSH 1
+LOADL 2
+LOADL 1
+SUBR IMul
+SUBR MAlloc
+STORE (1) 0[SB]
+POP (0) 1
+HALT
+

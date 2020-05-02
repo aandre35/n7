@@ -1,0 +1,24 @@
+;--------------------------------------------
+;VariableDeclaration : (boolean []) p = { true ,false }
+;--------------------------------------------
+PUSH 1
+LOADL 1
+LOADL 0
+STORE (1) 0[SB]
+; -> VariableAccess: p
+;--------------------------------------------
+;WHILE 1 : condition : p[ 0 ]
+;--------------------------------------------
+etiq_debut_while_1
+LOAD (1) 0[SB]
+LOADL 0
+LOADL 1
+SUBR IMul
+SUBR IAdd
+LOADI (1)
+JUMPIF (0) etiq_fin_while_1
+JUMP etiq_debut_while_1
+etiq_fin_while_1
+POP (0) 1
+HALT
+

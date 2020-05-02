@@ -1,0 +1,11 @@
+/* -*-c-mode-*- */
+
+test202 {
+  int i = 0;
+  int j = 1;
+  if (i == j) {
+    print i + j;
+  } else {
+    print i - j;
+  }
+}

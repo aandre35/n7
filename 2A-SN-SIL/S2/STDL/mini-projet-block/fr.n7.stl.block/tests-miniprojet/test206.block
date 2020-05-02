@@ -1,0 +1,6 @@
+/* -*-c-mode-*- */
+
+test206 {
+  const int c = 1;
+  const boolean c = true;
+}

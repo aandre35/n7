@@ -1,0 +1,19 @@
+;--------------------------------------------
+;VariableDeclaration : int i = 1
+;--------------------------------------------
+PUSH 1
+LOADL 1
+STORE (1) 0[SB]
+;--------------------------------------------
+;WHILE 1 : condition : true
+;--------------------------------------------
+etiq_debut_while_1
+LOADL 1
+JUMPIF (0) etiq_fin_while_1
+JUMP etiq_debut_while_1
+etiq_fin_while_1
+LOADL 2
+STORE (1) 0[SB]
+POP (0) 1
+HALT
+

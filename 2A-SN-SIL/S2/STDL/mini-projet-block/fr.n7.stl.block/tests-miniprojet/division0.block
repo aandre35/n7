@@ -1,0 +1,13 @@
+/* -*-c-mode-*- */
+division0 {
+  int a = 31;
+  int b = 5;
+  int q = 0;
+  int r = a;
+  while (b <= r) {
+    r = r - b;
+    q = q + 1;
+  }
+  print q;
+  print r;
+}

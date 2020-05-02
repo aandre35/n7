@@ -1,0 +1,13 @@
+/* -*-c-mode-*- */
+division1 {
+  <int,int> c = < 31, 5 >;
+  int r = fst c;
+  int b = snd c;
+  int q = 0;
+  while (b <= r) {
+    r = r - b;
+    q = q + 1;
+  }
+  print q;
+  print r;
+}

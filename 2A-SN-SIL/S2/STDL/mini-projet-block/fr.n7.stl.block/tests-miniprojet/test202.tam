@@ -1,0 +1,55 @@
+;--------------------------------------------
+;VariableDeclaration : int i = 0
+;--------------------------------------------
+PUSH 1
+LOADL 0
+STORE (1) 0[SB]
+;--------------------------------------------
+;VariableDeclaration : int j = 1
+;--------------------------------------------
+PUSH 1
+LOADL 1
+STORE (1) 1[SB]
+; -> VariableAccess: i
+;(i == j)
+;--------------------------------------------
+;IF 1 : condition : (i == j)
+;--------------------------------------------
+LOAD (1) 0[SB]
+; -> VariableAccess: j
+LOAD (1) 1[SB]
+SUBR IEq
+JUMPIF (0) etiq_debut_else_1
+; -> VariableAccess: i
+;(i + j)
+;--------------
+;Printer : print (i + j)
+;--------------
+;--------------
+;THEN 1
+;--------------
+LOAD (1) 0[SB]
+; -> VariableAccess: j
+LOAD (1) 1[SB]
+SUBR IAdd
+SUBR IOut
+etiq_fin_if_1
+JUMP etiq_fin_if_1
+etiq_debut_else_1
+; -> VariableAccess: i
+;(i - j)
+;--------------
+;Printer : print (i - j)
+;--------------
+;--------------
+;ELSE 1
+;--------------
+LOAD (1) 0[SB]
+; -> VariableAccess: j
+LOAD (1) 1[SB]
+SUBR ISub
+SUBR IOut
+etiq_fin_if_1
+POP (0) 2
+HALT
+

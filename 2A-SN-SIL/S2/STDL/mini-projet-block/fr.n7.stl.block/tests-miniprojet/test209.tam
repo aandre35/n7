@@ -1,0 +1,10 @@
+;--------------------------------------------
+;VariableDeclaration : struct T { int i; boolean b;} e = { 0 ,true }
+;--------------------------------------------
+PUSH 2
+LOADL 0
+LOADL 1
+STORE (2) 0[SB]
+POP (0) 2
+HALT
+

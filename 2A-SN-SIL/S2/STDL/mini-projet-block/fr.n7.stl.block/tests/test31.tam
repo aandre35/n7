@@ -1,0 +1,19 @@
+;--------------------------------------------
+;VariableDeclaration : int i = 1
+;--------------------------------------------
+PUSH 1
+LOADL 1
+STORE (1) 0[SB]
+; -> VariableAccess: i
+;(i == 1)
+;--------------------------------------------
+;IF 1 : condition : (i == 1)
+;--------------------------------------------
+LOAD (1) 0[SB]
+LOADL 1
+SUBR IEq
+JUMPIF (0) etiq_fin_if_1
+etiq_fin_if_1
+POP (0) 1
+HALT
+

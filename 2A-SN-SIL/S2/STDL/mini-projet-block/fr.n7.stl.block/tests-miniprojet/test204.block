@@ -1,0 +1,5 @@
+/* -*-c-mode-*- */
+
+test204 {
+  boolean b = true;
+}

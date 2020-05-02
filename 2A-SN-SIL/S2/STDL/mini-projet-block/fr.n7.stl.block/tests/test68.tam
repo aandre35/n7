@@ -1,0 +1,12 @@
+;--------------------------------------------
+;VariableDeclaration : struct P { int x; int y;} p = { 1 ,2 }
+;--------------------------------------------
+PUSH 2
+LOADL 1
+LOADL 2
+STORE (2) 0[SB]
+LOADL 3
+STORE (1) 0[SB]
+POP (0) 2
+HALT
+

@@ -1,0 +1,106 @@
+;--------------------------------------------
+;VariableDeclaration : (int []) t = { 31 ,5 }
+;--------------------------------------------
+PUSH 1
+LOADL 31
+LOADL 5
+STORE (1) 0[SB]
+;--------------------------------------------
+;VariableDeclaration : (int []) r = { 0 ,t[ 0 ] }
+;--------------------------------------------
+PUSH 1
+LOADL 0
+; -> VariableAccess: t
+LOAD (1) 0[SB]
+LOADL 0
+LOADL 1
+SUBR IMul
+SUBR IAdd
+LOADI (1)
+STORE (1) 1[SB]
+; -> VariableAccess: t
+;(t[ 1 ] <= r[ 1 ])
+;--------------------------------------------
+;WHILE 1 : condition : (t[ 1 ] <= r[ 1 ])
+;--------------------------------------------
+etiq_debut_while_1
+LOAD (1) 0[SB]
+LOADL 1
+LOADL 1
+SUBR IMul
+SUBR IAdd
+LOADI (1)
+; -> VariableAccess: r
+LOAD (1) 1[SB]
+LOADL 1
+LOADL 1
+SUBR IMul
+SUBR IAdd
+LOADI (1)
+SUBR ILeq
+JUMPIF (0) etiq_fin_while_1
+; -> VariableAccess: r
+;(r[ 1 ] - t[ 1 ])
+LOAD (1) 1[SB]
+LOADL 1
+LOADL 1
+SUBR IMul
+SUBR IAdd
+LOADI (1)
+; -> VariableAccess: t
+LOAD (1) 0[SB]
+LOADL 1
+LOADL 1
+SUBR IMul
+SUBR IAdd
+LOADI (1)
+SUBR ISub
+LOAD (1) 1[SB]
+LOADL 1
+LOADL 1
+SUBR IMul
+SUBR IAdd
+STOREI (1)
+; -> VariableAccess: r
+;(r[ 0 ] + 1)
+LOAD (1) 1[SB]
+LOADL 0
+LOADL 1
+SUBR IMul
+SUBR IAdd
+LOADI (1)
+LOADL 1
+SUBR IAdd
+LOAD (1) 1[SB]
+LOADL 0
+LOADL 1
+SUBR IMul
+SUBR IAdd
+STOREI (1)
+JUMP etiq_debut_while_1
+etiq_fin_while_1
+; -> VariableAccess: r
+;--------------
+;Printer : print r[ 0 ]
+;--------------
+LOAD (1) 1[SB]
+LOADL 0
+LOADL 1
+SUBR IMul
+SUBR IAdd
+LOADI (1)
+SUBR IOut
+; -> VariableAccess: r
+;--------------
+;Printer : print r[ 1 ]
+;--------------
+LOAD (1) 1[SB]
+LOADL 1
+LOADL 1
+SUBR IMul
+SUBR IAdd
+LOADI (1)
+SUBR IOut
+POP (0) 2
+HALT
+

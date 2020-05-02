@@ -1,0 +1,19 @@
+;--------------------------------------------
+;VariableDeclaration : struct B { boolean a; int n;} p = { true ,1 }
+;--------------------------------------------
+PUSH 2
+LOADL 1
+LOADL 1
+STORE (2) 0[SB]
+; -> VariableAccess: p
+;--------------------------------------------
+;WHILE 1 : condition : p.a
+;--------------------------------------------
+etiq_debut_while_1
+LOAD (2) 0[SB]
+JUMPIF (0) etiq_fin_while_1
+JUMP etiq_debut_while_1
+etiq_fin_while_1
+POP (0) 2
+HALT
+

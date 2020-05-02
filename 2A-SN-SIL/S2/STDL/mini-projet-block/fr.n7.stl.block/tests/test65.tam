@@ -1,0 +1,17 @@
+;--------------------------------------------
+;VariableDeclaration : struct P { int x; int y;} p = { 1 ,2 }
+;--------------------------------------------
+PUSH 2
+LOADL 1
+LOADL 2
+STORE (2) 0[SB]
+;--------------------------------------------
+;VariableDeclaration : int i = p.x
+;--------------------------------------------
+PUSH 1
+; -> VariableAccess: p
+LOAD (2) 0[SB]
+STORE (1) 2[SB]
+POP (0) 3
+HALT
+

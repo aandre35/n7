@@ -1,0 +1,10 @@
+Error : Identifiant de Type T déjà pris
+Exception in thread "main" fr.n7.stl.util.BlockSemanticsError
+	at fr.n7.stl.util.Logger.error(Logger.java:18)
+	at fr.n7.stl.block.ast.instruction.declaration.TypeDeclaration.collectAndPartialResolve(TypeDeclaration.java:54)
+	at fr.n7.stl.block.ast.Block.collectAndPartialResolve(Block.java:71)
+	at fr.n7.stl.block.Parser$CUP$Parser$actions.CUP$Parser$do_action_part00000000(Parser.java:761)
+	at fr.n7.stl.block.Parser$CUP$Parser$actions.CUP$Parser$do_action(Parser.java:2345)
+	at fr.n7.stl.block.Parser.do_action(Parser.java:668)
+	at java_cup.runtime.lr_parser.parse(lr_parser.java:699)
+	at fr.n7.stl.block.Driver.main(Driver.java:11)

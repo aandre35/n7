@@ -1,0 +1,5 @@
+/* -*-c-mode-*- */
+
+test209 {
+  struct T { int i; boolean b; } e = { 0, true};
+}

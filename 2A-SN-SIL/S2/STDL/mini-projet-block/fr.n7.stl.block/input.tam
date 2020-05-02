@@ -1,0 +1,100 @@
+;Nouvelle variable créée : i
+PUSH 1
+LOADL 1
+STORE (1) 0[SB]
+;Nouvelle variable créée : j
+PUSH 1
+LOADL 2
+;Nouvelle variable créée : p
+PUSH 2
+LOADL 3
+LOADL 2
+STORE (2) 0[SB]
+;Nouvelle variable créée : k
+PUSH 1
+;fr.n7.stl.block.ast.expression.accessible.VariableAccess@3b07d329
+LOAD (2) 0[SB]
+POP (0) 1
+STORE (1) 0[SB]
+;Nouvelle variable créée : q
+PUSH 1
+;fr.n7.stl.block.ast.expression.accessible.VariableAccess@41629346
+LOAD (2) 0[SB]
+POP (0) 1
+STORE (1) 0[SB]
+;fr.n7.stl.block.ast.expression.accessible.VariableAccess@404b9385
+;(i < 5)
+;IF 1 condition
+LOAD (1) 0[SB]
+LOADL 5
+SUBR ILss
+JUMPIF (0) ELSE_1
+;Nouvelle variable créée : a
+;IF 1 then
+PUSH 1
+LOADL 5
+STORE (1) 0[SB]
+;Nouvelle variable créée : b
+PUSH 1
+LOADL 4
+STORE (1) 0[SB]
+POP (0) 2
+JUMP END_IF_1
+ELSE_1
+END_IF_1
+;fr.n7.stl.block.ast.expression.accessible.VariableAccess@682a0b20
+;(i == 5)
+;IF 2 condition
+LOAD (1) 0[SB]
+LOADL 5
+SUBR IEq
+JUMPIF (0) ELSE_2
+;Nouvelle variable créée : j
+;IF 2 then
+PUSH 1
+LOADL 2
+LOADA 0[SB]
+STOREI (1)
+POP (0) 0
+JUMP END_IF_2
+ELSE_2
+;IF 2 else
+LOADL 5
+LOADA 0[SB]
+STOREI (1)
+POP (0) 0
+END_IF_2
+;Nouvelle variable créée : c
+PUSH 1
+LOADL 4
+STORE (1) 0[SB]
+;fr.n7.stl.block.ast.expression.accessible.VariableAccess@3d075dc0
+;(i < 3)
+;WHILE3:condition
+WHILE_3:
+LOAD (1) 0[SB]
+LOADL 3
+SUBR ILss
+JUMPIF (0) END_WHILE_3
+;fr.n7.stl.block.ast.expression.accessible.VariableAccess@214c265e
+;(i + 1)
+;WHILE3 body
+LOAD (1) 0[SB]
+LOADL 1
+SUBR IAdd
+LOADA 0[SB]
+STOREI (1)
+LOADL 4
+LOADA 0[SB]
+STOREI (1)
+POP (0) 0
+JUMP WHILE_3
+END_WHILE_3:
+;fr.n7.stl.block.ast.expression.accessible.VariableAccess@448139f0
+;Print (expression)
+LOAD (1) 0[SB]
+;fr.n7.stl.block.ast.expression.accessible.VariableAccess@7cca494b
+LOAD (1) 0[SB]
+RETURN (1) 0
+POP (0) 6
+

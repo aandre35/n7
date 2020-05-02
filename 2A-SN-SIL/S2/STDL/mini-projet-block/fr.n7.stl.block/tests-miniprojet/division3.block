@@ -1,0 +1,13 @@
+/* -*-c-mode-*- */
+division3 {
+  int t[] = { 31, 5 };
+  int r = t[0];
+  int b = t[1];
+  int q = 0;
+  while (b <= r) {
+    r = r - b;
+    q = q + 1;
+  }
+  print q;
+  print r;
+}

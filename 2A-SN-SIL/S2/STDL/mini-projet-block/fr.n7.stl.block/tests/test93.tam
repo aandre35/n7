@@ -1,0 +1,10 @@
+;--------------------------------------------
+;VariableDeclaration : (int *) p = new int
+;--------------------------------------------
+PUSH 1
+LOADL 1
+SUBR MAlloc
+STORE (1) 0[SB]
+POP (0) 1
+HALT
+

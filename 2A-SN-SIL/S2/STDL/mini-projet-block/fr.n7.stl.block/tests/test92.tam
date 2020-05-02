@@ -1,0 +1,15 @@
+;--------------------------------------------
+;VariableDeclaration : int i = 1
+;--------------------------------------------
+PUSH 1
+LOADL 1
+STORE (1) 0[SB]
+;--------------------------------------------
+;VariableDeclaration : (int *) p = fr.n7.stl.block.ast.expression.accessible.AddressAccess@3af49f1c
+;--------------------------------------------
+PUSH 1
+LOADA 0[SB]
+STORE (1) 1[SB]
+POP (0) 2
+HALT
+

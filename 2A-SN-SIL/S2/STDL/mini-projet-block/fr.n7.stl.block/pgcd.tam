@@ -1,0 +1,121 @@
+;--------------------------------------------
+;VariableDeclaration : < int, int> c = < 47, 53>
+;--------------------------------------------
+PUSH 2
+LOADL 47
+LOADL 53
+STORE (2) 0[SB]
+;--------------------------------------------
+;VariableDeclaration : int a = (fstc)
+;--------------------------------------------
+PUSH 1
+; -> VariableAccess: c
+LOAD (2) 0[SB]
+POP (0) 1
+STORE (1) 2[SB]
+;--------------------------------------------
+;VariableDeclaration : int b = (sndc)
+;--------------------------------------------
+PUSH 1
+; -> VariableAccess: c
+LOAD (2) 0[SB]
+POP (1) 1
+STORE (1) 3[SB]
+; -> VariableAccess: a
+;(a * b)
+;((a * b) != test)
+;--------------------------------------------
+;WHILE 1 : condition : ((a * b) != test)
+;--------------------------------------------
+etiq_debut_while_1
+LOAD (1) 2[SB]
+; -> VariableAccess: b
+LOAD (1) 3[SB]
+SUBR IMul
+LOADL 0
+SUBR INeq
+JUMPIF (0) etiq_fin_while_1
+; -> VariableAccess: a
+;(a > b)
+;--------------------------------------------
+;IF 2 : condition : (a > b)
+;--------------------------------------------
+;WHILE1 body
+LOAD (1) 2[SB]
+; -> VariableAccess: b
+LOAD (1) 3[SB]
+SUBR IGtr
+JUMPIF (0) etiq_debut_else_2
+;--------------------------------------------
+;VariableDeclaration : int na = (a - b)
+;--------------------------------------------
+;--------------
+;THEN 2
+;--------------
+PUSH 1
+; -> VariableAccess: a
+;(a - b)
+LOAD (1) 2[SB]
+; -> VariableAccess: b
+LOAD (1) 3[SB]
+SUBR ISub
+STORE (1) 4[SB]
+; -> VariableAccess: na
+LOAD (1) 4[SB]
+STORE (1) 2[SB]
+POP (0) 1
+JUMP etiq_fin_if_2
+etiq_debut_else_2
+;--------------------------------------------
+;VariableDeclaration : int nb = (b - a)
+;--------------------------------------------
+;--------------
+;ELSE 2
+;--------------
+PUSH 1
+; -> VariableAccess: b
+;(b - a)
+LOAD (1) 3[SB]
+; -> VariableAccess: a
+LOAD (1) 2[SB]
+SUBR ISub
+STORE (1) 4[SB]
+; -> VariableAccess: nb
+LOAD (1) 4[SB]
+STORE (1) 3[SB]
+POP (0) 1
+etiq_fin_if_2
+JUMP etiq_debut_while_1
+etiq_fin_while_1
+;--------------------------------------------
+;VariableDeclaration : int res = a
+;--------------------------------------------
+PUSH 1
+; -> VariableAccess: a
+LOAD (1) 2[SB]
+STORE (1) 4[SB]
+; -> VariableAccess: res
+;(res == test)
+;--------------------------------------------
+;IF 3 : condition : (res == test)
+;--------------------------------------------
+LOAD (1) 4[SB]
+LOADL 0
+SUBR IEq
+JUMPIF (0) etiq_fin_if_3
+; -> VariableAccess: b
+;--------------
+;THEN 3
+;--------------
+LOAD (1) 3[SB]
+STORE (1) 4[SB]
+etiq_fin_if_3
+; -> VariableAccess: res
+;--------------
+;Printer : print res
+;--------------
+LOAD (1) 4[SB]
+SUBR IOut
+POP (0) 5
+HALT
+

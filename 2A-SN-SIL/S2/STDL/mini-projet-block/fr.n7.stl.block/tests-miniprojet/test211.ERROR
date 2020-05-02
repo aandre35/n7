@@ -1,0 +1,10 @@
+Error : Variable type struct T { int i; boolean b;} and expression type [int, int] missmatch.
+Exception in thread "main" fr.n7.stl.util.BlockSemanticsError
+	at fr.n7.stl.util.Logger.error(Logger.java:18)
+	at fr.n7.stl.block.ast.instruction.declaration.VariableDeclaration.checkType(VariableDeclaration.java:143)
+	at fr.n7.stl.block.ast.Block.checkType(Block.java:100)
+	at fr.n7.stl.block.Parser$CUP$Parser$actions.CUP$Parser$do_action_part00000000(Parser.java:765)
+	at fr.n7.stl.block.Parser$CUP$Parser$actions.CUP$Parser$do_action(Parser.java:2345)
+	at fr.n7.stl.block.Parser.do_action(Parser.java:668)
+	at java_cup.runtime.lr_parser.parse(lr_parser.java:699)
+	at fr.n7.stl.block.Driver.main(Driver.java:11)

@@ -1,0 +1,11 @@
+/* -*-c-mode-*- */
+division6 {
+  int t[] = { 31, 5 };
+  int r[] = { 0, t[0] };
+  while (t[1] <= r[1]) {
+    r[1] = r[1] - t[1];
+    r[0] = r[0] + 1;
+  }
+  print r[0];
+  print r[1];
+}

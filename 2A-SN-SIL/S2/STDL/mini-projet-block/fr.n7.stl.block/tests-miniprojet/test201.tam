@@ -1,0 +1,21 @@
+;--------------------------------------------
+;VariableDeclaration : int i = 0
+;--------------------------------------------
+PUSH 1
+LOADL 0
+STORE (1) 0[SB]
+;(2 * i)
+;((2 * i) + 1)
+;--------------
+;Printer : print ((2 * i) + 1)
+;--------------
+LOADL 2
+; -> VariableAccess: i
+LOAD (1) 0[SB]
+SUBR IMul
+LOADL 1
+SUBR IAdd
+SUBR IOut
+POP (0) 1
+HALT
+

@@ -1,0 +1,6 @@
+/* -*-c-mode-*- */
+
+test201 {
+  int i = 0;
+  print 2 * i + 1;
+ }

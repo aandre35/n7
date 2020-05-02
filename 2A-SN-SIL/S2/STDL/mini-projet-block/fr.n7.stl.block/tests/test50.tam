@@ -1,0 +1,18 @@
+;--------------------------------------------
+;VariableDeclaration : < boolean, int> p = { true ,1 }
+;--------------------------------------------
+PUSH 2
+LOADL 1
+LOADL 1
+STORE (2) 0[SB]
+; -> VariableAccess: p
+;--------------------------------------------
+;IF 1 : condition : (fstp)
+;--------------------------------------------
+LOAD (2) 0[SB]
+POP (0) 1
+JUMPIF (0) etiq_fin_if_1
+etiq_fin_if_1
+POP (0) 2
+HALT
+

@@ -1,0 +1,7 @@
+/* -*-c-mode-*- */
+
+test212 {
+  struct T { int i; boolean b; } e = { 0, true};
+  e.i = e.i + 1;
+  e.b = e.b && true;
+}

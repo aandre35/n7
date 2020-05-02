@@ -1,0 +1,5 @@
+/* -*-c-mode-*- */
+
+test210 {
+  <int,boolean> c = { 0, 1};
+}

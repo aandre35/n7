@@ -1,0 +1,16 @@
+/* -*-c-mode-*- */
+division {
+  <int,int> division( int a, int b ) {
+    int q = 0;
+    int r = a;
+    while (b <= r) {
+      r = r - b;
+      q = q + 1;
+    }
+  }
+  int a = 31;
+  int b = 5;
+  <int,int> r = division( a, b);
+  print fst r;
+  print snd r;
+}

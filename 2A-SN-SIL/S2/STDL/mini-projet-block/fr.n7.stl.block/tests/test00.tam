@@ -1,0 +1,15 @@
+;--------------------------------------------
+;VariableDeclaration : int i = 1
+;--------------------------------------------
+PUSH 1
+LOADL 1
+STORE (1) 0[SB]
+; -> VariableAccess: i
+;--------------
+;Printer : print i
+;--------------
+LOAD (1) 0[SB]
+SUBR IOut
+POP (0) 1
+HALT
+
